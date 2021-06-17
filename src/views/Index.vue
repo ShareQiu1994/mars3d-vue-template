@@ -9,20 +9,18 @@ import Map from '../components/mars3d/Map.vue'
 
 export default {
   name: 'Index',
-
   components: {
     Map
   },
 
-  data() {
+  data () {
     return {
       configUrl: 'config/config.json'
     }
   },
-
   methods: {
     // 地图构造完成回调
-    onMapload(map) {
+    onMapload (map) {
       // 以下为演示代码
 
       // 创建entity图层
@@ -78,7 +76,7 @@ export default {
     },
 
     // 以下为演示代码
-    addGraphic_e01(graphicLayer) {
+    addGraphic_e01 (graphicLayer) {
       const graphic = new this.mars3d.graphic.LabelEntity({
         position: new this.mars3d.LatLngPoint(116.1, 31.0, 1000),
         style: {
@@ -97,7 +95,7 @@ export default {
       graphicLayer.addGraphic(graphic)
     },
 
-    addGraphic_e02(graphicLayer) {
+    addGraphic_e02 (graphicLayer) {
       const graphic = new this.mars3d.graphic.PointEntity({
         position: [116.2, 31.0, 1000],
         style: {
@@ -111,7 +109,7 @@ export default {
       graphicLayer.addGraphic(graphic)
     },
 
-    addGraphic_e03(graphicLayer) {
+    addGraphic_e03 (graphicLayer) {
       const graphic = new this.mars3d.graphic.BillboardEntity({
         name: '贴地图标',
         position: [116.3, 31.0, 1000],
@@ -126,7 +124,7 @@ export default {
       graphicLayer.addGraphic(graphic)
     },
 
-    addGraphic_e04(graphicLayer) {
+    addGraphic_e04 (graphicLayer) {
       const graphic = new this.mars3d.graphic.PlaneEntity({
         position: new this.mars3d.LatLngPoint(116.4, 31.0, 1000),
         style: {
@@ -142,7 +140,7 @@ export default {
     },
 
     //
-    addGraphic_e05(graphicLayer) {
+    addGraphic_e05 (graphicLayer) {
       const graphic = new this.mars3d.graphic.BoxEntity({
         position: new this.mars3d.LatLngPoint(116.5, 31.0, 1000),
         style: {
@@ -158,7 +156,7 @@ export default {
       graphicLayer.addGraphic(graphic)
     },
 
-    addGraphic_e06(graphicLayer) {
+    addGraphic_e06 (graphicLayer) {
       const graphic = new this.mars3d.graphic.CircleEntity({
         position: [116.1, 30.9, 1000],
         style: {
@@ -175,7 +173,7 @@ export default {
       graphicLayer.addGraphic(graphic)
     },
 
-    addGraphic_e07(graphicLayer) {
+    addGraphic_e07 (graphicLayer) {
       const graphic = new this.mars3d.graphic.CylinderEntity({
         position: [116.2, 30.9, 1000],
         style: {
@@ -191,7 +189,7 @@ export default {
     },
 
     //
-    addGraphic_e08(graphicLayer) {
+    addGraphic_e08 (graphicLayer) {
       const graphic = new this.mars3d.graphic.EllipsoidEntity({
         position: new this.mars3d.LatLngPoint(116.3, 30.9, 1000),
         style: {
@@ -204,7 +202,7 @@ export default {
       graphicLayer.addGraphic(graphic)
     },
 
-    addGraphic_e09(graphicLayer) {
+    addGraphic_e09 (graphicLayer) {
       const graphic = new this.mars3d.graphic.ModelEntity({
         name: '消防员',
         position: [116.4, 30.9, 1000],
@@ -217,7 +215,7 @@ export default {
       graphicLayer.addGraphic(graphic)
     },
 
-    addGraphic_e10(graphicLayer) {
+    addGraphic_e10 (graphicLayer) {
       const graphic = new this.mars3d.graphic.PolylineEntity({
         positions: [
           [116.5, 30.9, 1000],
@@ -232,7 +230,7 @@ export default {
       graphicLayer.addGraphic(graphic) // 还可以另外一种写法: graphic.addTo(graphicLayer)
     },
 
-    addGraphic_e11(graphicLayer) {
+    addGraphic_e11 (graphicLayer) {
       const graphic = new this.mars3d.graphic.PolylineVolumeEntity({
         positions: [
           [116.1, 30.8, 1000],
@@ -249,7 +247,7 @@ export default {
       graphicLayer.addGraphic(graphic) // 还可以另外一种写法: graphic.addTo(graphicLayer)
     },
 
-    addGraphic_e12(graphicLayer) {
+    addGraphic_e12 (graphicLayer) {
       const graphic = new this.mars3d.graphic.CorridorEntity({
         positions: [
           [116.2, 30.8, 1000],
@@ -265,7 +263,7 @@ export default {
       graphicLayer.addGraphic(graphic) // 还可以另外一种写法: graphic.addTo(graphicLayer)
     },
 
-    addGraphic_e13(graphicLayer) {
+    addGraphic_e13 (graphicLayer) {
       const graphic = new this.mars3d.graphic.WallEntity({
         positions: [
           [116.3, 30.8, 1000],
@@ -288,7 +286,7 @@ export default {
       graphicLayer.addGraphic(graphic) // 还可以另外一种写法: graphic.addTo(graphicLayer)
     },
 
-    addGraphic_e14(graphicLayer) {
+    addGraphic_e14 (graphicLayer) {
       const graphic = new this.mars3d.graphic.RectangleEntity({
         positions: [
           [116.383144, 30.819978, 444.42],
@@ -306,7 +304,7 @@ export default {
       graphicLayer.addGraphic(graphic) // 还可以另外一种写法: graphic.addTo(graphicLayer)
     },
 
-    addGraphic_e15(graphicLayer) {
+    addGraphic_e15 (graphicLayer) {
       const graphic = new this.mars3d.graphic.PolygonEntity({
         positions: [
           [116.510278, 30.834372, 567.29],
